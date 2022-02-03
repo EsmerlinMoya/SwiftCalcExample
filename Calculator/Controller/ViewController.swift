@@ -25,11 +25,15 @@ class ViewController: UIViewController {
         }
     }
     
+    private let calculator = CalculatorLogic()
+    
     @IBAction func calcButtonPressed(_ sender: UIButton) {
         
         //What should happen when a non-number button is pressed
        
         isFinishedTypingNumber = true
+        
+        calculator.setNumber(displayValue)
 
         if let calcMethod = sender.currentTitle{
           
